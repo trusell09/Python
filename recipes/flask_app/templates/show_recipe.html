@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Hi, {{user.first_name}}!</h1>
+        <div>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/logout">Logout</a>
+        </div>
+    <div>
+        <div>
+            <h1>{{recipe.name}}:</h1>
+            <h3>Made On: {{recipe.date_made.strftime('%Y-%m-%d')}}</h3>
+            <h3>Under 30 Minutes:
+                {%  if recipe.under30min == 1 %}
+                Yes
+                {% else %}
+                No
+                {% endif %}
+            </h3>
+            <h3>Description:  {{recipe.description}}</h3>
+            <h3>Instructions:  {{recipe.instructions}}</h3>
+        </div>
+    </div>
+
+</body>
+</html>

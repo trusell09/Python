@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Hi, {{user.first_name}}!</h1>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/logout">Logout</a>
+    <form action="/update/recipe" method="post">
+        <h1>Edit Recipe:</h1>
+            {% with messages = get_flashed_messages(category_filter=['recipe']) %}
+            {% if messages %}
+                {% for message in messages %}
+                <p>{{message}}</p>
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
+            <input type="hidden" name="id" value={{edit.id}}>
+                    <div>
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" value="{{edit.name}}">
+                    </div>
+                    <div>
+                    <label for="description">Description:</label>
+                    <textarea name="description"  cols="45" rows="5">{{edit.description}}</textarea>
+                    </div>
+                    <div>
+                    <label for="instructions">Instructions:</label>
+                    <textarea name="instructions"  cols="45" rows="5">{{edit.instructions}}</textarea>
+                    </div>
+                    <div>
+                    <label for="date_made">Date:</label>
+                    <input type="date" name="date_made" value="{{edit.date_made.strftime('%Y-%m-%d')}}">
+                    </div>
+                <label for="under30min">Under 30 Minutes:</label>
+                    <input type="radio" name="under30min" value="0" checked >
+                    <label for="0">No</label>
+                    <input type="radio" name="under30min" value="1">
+                    <label for="1">Yes</label>
+                <input type="submit" value="Edit">
+    </form>
+</body>
+</html>
