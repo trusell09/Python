@@ -18,7 +18,6 @@ def advanced():
     ]
 
 
-
     return render_template("adv.html", students = student_info)
 
 
