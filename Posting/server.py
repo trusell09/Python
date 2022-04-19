@@ -3,7 +3,6 @@ app = Flask(__name__)
 app.secret_key ="l;sdknf"
 
 
-
 @app.route('/')
 def index():
     
