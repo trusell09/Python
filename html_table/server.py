@@ -19,7 +19,6 @@ def people():
     ]
 
 
-
     return render_template("index.html", names = personal_info)
 
 
