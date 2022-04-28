@@ -16,7 +16,6 @@ else:
     print("You are not a Cubs fan. Bummer!")
 """
 
-
 """
 is_fan = True
 is_serious = False
