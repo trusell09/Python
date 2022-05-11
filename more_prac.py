@@ -41,7 +41,6 @@ def max_num(num1, num2, num3):
 print(max_num(900,500,12000000000))
 """
 
-
 """
 num1 = float(input("Enter first number: "))
 op = input("Enter operator: ")
