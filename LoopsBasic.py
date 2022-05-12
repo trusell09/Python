@@ -5,7 +5,6 @@ for i in range(low, high):
     print(i)
 
 
-
 for x in range(5,1001, 5):
     print(x)
     
