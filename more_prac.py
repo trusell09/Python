@@ -57,7 +57,6 @@ else:
         print("Operator Invalid")
 """
 
-
 """"
 myFavorites ={
     "cubs": "Chicago Cubs",
