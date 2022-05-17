@@ -30,7 +30,6 @@ result = float(num1) + float(num2)
 print(result)
 """
 
-
 """
 player = input("Enter a baseball player: ")
 position = input("Enter positon player played: ")
