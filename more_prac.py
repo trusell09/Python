@@ -65,7 +65,6 @@ myFavorites ={
     "LBJ": "Lebron James",
     "DP": "Deadpool",
 }
-
 print(myFavorites.get("DP"))
 print(myFavorites["real"])
 """
